@@ -22,7 +22,7 @@ choose_gender_csv <- gender_csv %>%
   na.omit() %>%
   mutate(difference_in_inequality=gii_2019-gii_2010) 
 
-#-------merging spatial data and csv
+#-------merge spatial data and csv
 spatial_data <- worldmap %>%
   merge(.,
         choose_gender_csv,
@@ -33,7 +33,7 @@ spatial_data%>%
   head(., n=10)
 
 
-#-------visualizing data
+#-------visualize data
 tmap_mode("plot")
 spatial_data %>%
   qtm(.,fill="difference_in_inequality")
