@@ -38,6 +38,8 @@ tmap_mode("plot")
 spatial_data %>%
   qtm(.,fill="difference_in_inequality")
 
+#just a test
+
 
 
 
